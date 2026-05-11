@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://tecnolettra.uji.es/ontodic#"
+     xml:base="http://tecnolettra.uji.es/ontodic"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontodic="http://tecnolettra.uji.es/ontodic#">
+    <owl:Ontology rdf:about="http://tecnolettra.uji.es/ontodic">
+        <owl:versionIRI rdf:resource="urn:absolute:2.1.0."/>
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:title>Ontodic model</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Comentario_a_la_definición -->
+
+    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Comentario_a_la_definición"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Dict_Reference -->
+
+    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Dict_Reference"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Nota_de_uso -->
+
+    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Nota_de_uso"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#context -->
+
+    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#context"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#hasSyntFunction -->
+
+    <owl:ObjectProperty rdf:about="http://tecnolettra.uji.es/ontodic#hasSyntFunction"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#isSynonymOf -->
+
+    <owl:ObjectProperty rdf:about="http://tecnolettra.uji.es/ontodic#isSynonymOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+        <rdfs:range rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Abreviatura -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Abreviatura">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Adjetivo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Adjetivo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Adverbio -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Adverbio">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Catalan -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Catalan">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Chinese -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Chinese">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Compuesto -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Compuesto">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Derivada -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Derivada">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#English -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#English">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Espanol -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Espanol">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#FemGen -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#FemGen">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramGen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#French -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#French">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#German -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#German">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#GramCat -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramCat">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#GramGen -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramGen">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#GramNum -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramNum">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Italian -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Italian">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Lengua -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Lengua">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#LinguisticExpression -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#LinguisticExpression">
+        <rdfs:label xml:lang="es">ExpresionLinguistica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#MascGen -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#MascGen">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramGen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#MorfTipo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#MorfTipo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#PluralNum -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#PluralNum">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramNum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Portuguese -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Portuguese">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Prefijo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Prefijo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Sigla -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sigla">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Significado -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Significado"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Simbolo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Simbolo"/>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Simple -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Simple">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#SingularNum -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#SingularNum">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramNum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Sufijo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sufijo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Sustantivo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sustantivo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#Verbo -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Verbo">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic#WorldObject -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#WorldObject">
+        <rdfs:label xml:lang="es">ObjetoDelMundo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic/Dominio -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic/Dominio">
+        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Significado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tecnolettra.uji.es/ontodic/Termino -->
+
+    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic/Termino"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
