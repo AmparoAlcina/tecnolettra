@@ -1,375 +1,776 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://tecnolettra.uji.es/ontodic#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://tecnolettra.uji.es/ontodic"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ontodic="http://tecnolettra.uji.es/ontodic#">
-    <owl:Ontology rdf:about="http://tecnolettra.uji.es/ontodic">
-        <owl:versionIRI rdf:resource="urn:absolute:2.1.0."/>
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <dc:title>Ontodic model</dc:title>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Comentario_a_la_definición -->
-
-    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Comentario_a_la_definición"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Dict_Reference -->
-
-    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Dict_Reference"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Nota_de_uso -->
-
-    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#Nota_de_uso"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#context -->
-
-    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#context"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#definition -->
-
-    <owl:AnnotationProperty rdf:about="http://tecnolettra.uji.es/ontodic#definition"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#hasSyntFunction -->
-
-    <owl:ObjectProperty rdf:about="http://tecnolettra.uji.es/ontodic#hasSyntFunction"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#isSynonymOf -->
-
-    <owl:ObjectProperty rdf:about="http://tecnolettra.uji.es/ontodic#isSynonymOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-        <rdfs:range rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Abreviatura -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Abreviatura">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Adjetivo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Adjetivo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Adverbio -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Adverbio">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Catalan -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Catalan">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Chinese -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Chinese">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Compuesto -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Compuesto">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Derivada -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Derivada">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#English -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#English">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Espanol -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Espanol">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#FemGen -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#FemGen">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramGen"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#French -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#French">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#German -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#German">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#GramCat -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramCat">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#GramGen -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramGen">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#GramNum -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#GramNum">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Italian -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Italian">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Lengua -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Lengua">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#LinguisticExpression -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#LinguisticExpression">
-        <rdfs:label xml:lang="es">ExpresionLinguistica</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#MascGen -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#MascGen">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramGen"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#MorfTipo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#MorfTipo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#LinguisticExpression"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#PluralNum -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#PluralNum">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramNum"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Portuguese -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Portuguese">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Lengua"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Prefijo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Prefijo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Sigla -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sigla">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Significado -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Significado"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Simbolo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Simbolo"/>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Simple -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Simple">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#SingularNum -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#SingularNum">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramNum"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Sufijo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sufijo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#MorfTipo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Sustantivo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Sustantivo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#Verbo -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#Verbo">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#GramCat"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic#WorldObject -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic#WorldObject">
-        <rdfs:label xml:lang="es">ObjetoDelMundo</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic/Dominio -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic/Dominio">
-        <rdfs:subClassOf rdf:resource="http://tecnolettra.uji.es/ontodic#Significado"/>
-    </owl:Class>
-    
-
-
-    <!-- http://tecnolettra.uji.es/ontodic/Termino -->
-
-    <owl:Class rdf:about="http://tecnolettra.uji.es/ontodic/Termino"/>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+     ontologyIRI="http://tecnolettra.uji.es/ontodic"
+     versionIRI="http://tecnolettra.uji.es/ontodic/1.0.1">
+    <Prefix name="" IRI="http://tecnolettra.uji.es/ontodic#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="ontodic" IRI="http://tecnolettra.uji.es/ontodic#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>Ontodic model</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Abreviatura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adjetivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adverbio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Catalan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chinese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Compuesto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Derivada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#English"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Espanol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FemGen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#French"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#German"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GramCat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GramGen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GramNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Italian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lengua"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinguisticExpression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MascGen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MorfTipo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PluralNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Portuguese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefijo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sigla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Significado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simbolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SingularNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sufijo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sustantivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Verbo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorldObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Dominio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Termino"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSyntFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSynonymOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Comentario_a_la_definición"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Dict_Reference"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#Nota_de_uso"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#context"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Abreviatura"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adjetivo"/>
+        <Class IRI="#GramCat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adverbio"/>
+        <Class IRI="#GramCat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Catalan"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chinese"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Compuesto"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Derivada"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#English"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Espanol"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FemGen"/>
+        <Class IRI="#GramGen"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#French"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#German"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GramCat"/>
+        <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GramGen"/>
+        <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GramNum"/>
+        <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Italian"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lengua"/>
+        <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MascGen"/>
+        <Class IRI="#GramGen"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MorfTipo"/>
+        <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PluralNum"/>
+        <Class IRI="#GramNum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Portuguese"/>
+        <Class IRI="#Lengua"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefijo"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sigla"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simple"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SingularNum"/>
+        <Class IRI="#GramNum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sufijo"/>
+        <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sustantivo"/>
+        <Class IRI="#GramCat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Verbo"/>
+        <Class IRI="#GramCat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Dominio"/>
+        <Class IRI="#Significado"/>
+    </SubClassOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSynonymOf"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isSynonymOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSynonymOf"/>
+        <Class IRI="#LinguisticExpression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSynonymOf"/>
+        <Class IRI="#LinguisticExpression"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:modified"/>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2012-06-14</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+        <IRI>http://purl.org/dc/aboutdcmi#DCMI</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+        <Literal xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <Literal xml:lang="en">The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <Literal xml:lang="en">An entity responsible for making contributions to the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <Literal xml:lang="en">Contributor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:contributor</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal xml:lang="en">The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal xml:lang="en">Coverage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:coverage</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal xml:lang="en">An entity primarily responsible for making the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal xml:lang="en">Creator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:creator</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character.  Either the start or end date may be missing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal xml:lang="en">Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:date</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal xml:lang="en">An account of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal xml:lang="en">Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:description</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal xml:lang="en">The file format, physical medium, or dimensions of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal xml:lang="en">Format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:format</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal xml:lang="en">Recommended practice is to identify the resource by means of a string conforming to an identification system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal xml:lang="en">An unambiguous reference to the resource within a given context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal xml:lang="en">Identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:identifier</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal xml:lang="en">Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal xml:lang="en">A language of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal xml:lang="en">Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:language</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <Literal xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <Literal xml:lang="en">An entity responsible for making the resource available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <Literal xml:lang="en">Publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:publisher</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal xml:lang="en">Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal xml:lang="en">A related resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal xml:lang="en">Relation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:relation</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal xml:lang="en">Information about rights held in and over the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal xml:lang="en">Rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:rights</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal xml:lang="en">A related resource from which the described resource is derived.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal xml:lang="en">Source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:source</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal xml:lang="en">The topic of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal xml:lang="en">Subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">A name given to the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal xml:lang="en">Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal xml:lang="en">The nature or genre of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal xml:lang="en">Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:type</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LinguisticExpression</IRI>
+        <Literal xml:lang="es">ExpresionLinguistica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorldObject</IRI>
+        <Literal xml:lang="es">ObjetoDelMundo</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
