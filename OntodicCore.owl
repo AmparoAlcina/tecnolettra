@@ -7,19 +7,33 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://tecnolettra.uji.es/ontodic"
      versionIRI="http://tecnolettra.uji.es/ontodic/1.0.1">
-    <Prefix name="" IRI="http://tecnolettra.uji.es/ontodic#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="odic" IRI="http://tecnolettra.uji.es/ontodic#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Prefix name="ontodic" IRI="http://tecnolettra.uji.es/ontodic#"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal>Ontodic model</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal>Amparo Alcina</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en">Firstly, the ONTODIC model formalizes natural language by separating
+expression and content. Secondly, it formalizes conceptualization as the different
+levels of linguistic analysis, which may be morphological, grammatical or semantic, among others.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <Literal>Ontodic</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="#bibo:doi"/>
+        <Literal>https://doi.org/10.1075/term.23030.alc</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#Abreviatura"/>
@@ -130,10 +144,19 @@
         <ObjectProperty IRI="#isSynonymOf"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:isPartOf"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:issued"/>
@@ -145,7 +168,16 @@
         <AnnotationProperty abbreviatedIRI="terms:publisher"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:source"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/funder"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/funding"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#Comentario_a_la_definición"/>
@@ -161,6 +193,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#bibo:doi"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:note"/>
@@ -702,31 +737,6 @@
         <AnnotationProperty abbreviatedIRI="skos:note"/>
         <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:issued"/>
-        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
-        <Literal xml:lang="en">A name given to the resource.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
-        <AbbreviatedIRI>dc:</AbbreviatedIRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
-        <Literal xml:lang="en">Title</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
-        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
