@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://tecnolettra.uji.es/ontodic"
-     versionIRI="http://tecnolettra.uji.es/ontodic/1.0.1">
+     versionIRI="http://tecnolettra.uji.es/ontodic/1.0.1#">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -18,6 +18,10 @@
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>Ontodic model</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
         <Literal>Amparo Alcina</Literal>
     </Annotation>
@@ -26,10 +30,6 @@
         <Literal xml:lang="en">Firstly, the ONTODIC model formalizes natural language by separating
 expression and content. Secondly, it formalizes conceptualization as the different
 levels of linguistic analysis, which may be morphological, grammatical or semantic, among others.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:title"/>
-        <Literal>Ontodic</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="#bibo:doi"/>
@@ -57,9 +57,6 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Class IRI="#Derivada"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#English"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Espanol"/>
     </Declaration>
     <Declaration>
@@ -79,6 +76,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     </Declaration>
     <Declaration>
         <Class IRI="#GramNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingles"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Italian"/>
@@ -120,6 +120,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Class IRI="#SingularNum"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Sintagma"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Sufijo"/>
     </Declaration>
     <Declaration>
@@ -142,6 +145,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isSynonymOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:bibliographicCitation"/>
@@ -178,6 +184,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://schema.org/funding"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://schema.org/image"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#Comentario_a_la_definición"/>
@@ -232,10 +241,6 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Class IRI="#MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#English"/>
-        <Class IRI="#Lengua"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Espanol"/>
         <Class IRI="#Lengua"/>
     </SubClassOf>
@@ -262,6 +267,10 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <SubClassOf>
         <Class IRI="#GramNum"/>
         <Class IRI="#LinguisticExpression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingles"/>
+        <Class IRI="#Lengua"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Italian"/>
@@ -302,6 +311,10 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <SubClassOf>
         <Class IRI="#SingularNum"/>
         <Class IRI="#GramNum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sintagma"/>
+        <Class IRI="#MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sufijo"/>
@@ -737,6 +750,31 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <AnnotationProperty abbreviatedIRI="skos:note"/>
         <AbbreviatedIRI>dc:subject</AbbreviatedIRI>
         <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:issued"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1999-07-02</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">A name given to the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <AbbreviatedIRI>dc:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <AbbreviatedIRI>dc:title</AbbreviatedIRI>
+        <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
