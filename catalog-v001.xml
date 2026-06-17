@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/AccionesYProcesos" uri="diccionarios/AccionesYProcesos.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/ActoresDeLaMovilidad" uri="diccionarios/ActoresDeLaMovilidad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/Ecodrive" uri="Ecodrive.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/EcodriveDomain#" uri="EcodriveDomain.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/GestionMovilidad" uri="diccionarios/GestionMovilidad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/GestionSostenibilidad" uri="diccionarios/GestionDeLaSostenibilidad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/InfraestructurasFisicas" uri="diccionarios/InfraestructurasFisicas.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/ModalidadesMovilidad" uri="diccionarios/ModalidadesMovilidad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/TecnologiasMovilidad" uri="diccionarios/TecnologiasMovilidad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/mediosTransporte" uri="diccionarios/mediosTransporte.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/ontodic#" uri="OntodicCore.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1781683663673" name="http://tecnolettra.uji.es/ontodic/DomainMobility" uri="DomainMobility.owl"/>
+    </group>
+</catalog>
