@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://tecnolettra.uji.es/ontodic#"
+     xml:base="http://tecnolettra.uji.es/ontodic/OntodicCore"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://tecnolettra.uji.es/ontodic#"
-     versionIRI="http://tecnolettra.uji.es/ontodic">
+     ontologyIRI="http://tecnolettra.uji.es/ontodic/OntodicCore">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
@@ -32,22 +32,13 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Literal>Ontodic</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty IRI="#bibo:doi"/>
+        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
         <Literal>https://doi.org/10.1075/term.23030.alc</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal>1.1.0</Literal>
     </Annotation>
-    <Declaration>
-        <Class IRI="Dominio"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Sintagma"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Termino"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#Abreviatura"/>
     </Declaration>
@@ -68,6 +59,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     </Declaration>
     <Declaration>
         <Class IRI="#Derivada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dominio"/>
     </Declaration>
     <Declaration>
         <Class IRI="#English"/>
@@ -133,10 +127,16 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Class IRI="#SingularNum"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Sintagma"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Sufijo"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sustantivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Termino"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Verbo"/>
@@ -184,28 +184,28 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <AnnotationProperty abbreviatedIRI="terms:title"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="bibo:doi"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty IRI="http://schema.org/funder"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://schema.org/funding"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#Comentario_a_la_definición"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Comentario_a_la_definición"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#Dict_Reference"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Dict_Reference"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#Nota_de_uso"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Nota_de_uso"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#context"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:context"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#definition"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#bibo:doi"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:definition"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:note"/>
@@ -213,14 +213,6 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <Declaration>
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="Dominio"/>
-        <Class IRI="#Significado"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Sintagma"/>
-        <Class IRI="#MorfTipo"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Abreviatura"/>
         <Class IRI="#MorfTipo"/>
@@ -248,6 +240,10 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <SubClassOf>
         <Class IRI="#Derivada"/>
         <Class IRI="#MorfTipo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dominio"/>
+        <Class IRI="#Significado"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#English"/>
@@ -320,6 +316,10 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <SubClassOf>
         <Class IRI="#SingularNum"/>
         <Class IRI="#GramNum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sintagma"/>
+        <Class IRI="#MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sufijo"/>
