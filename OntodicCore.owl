@@ -16,6 +16,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="ontodic" IRI="http://tecnolettra.uji.es/ontodic/"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
         <Literal>Amparo Alcina (https://orcid.org/0000-0002-4931-564X)</Literal>
@@ -39,109 +40,109 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Literal>1.1.0</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Abreviatura"/>
+        <Class IRI="/Abreviatura"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Adjetivo"/>
+        <Class IRI="/Adjetivo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Adverbio"/>
+        <Class IRI="/Adverbio"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Catalan"/>
+        <Class IRI="/Catalan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Chinese"/>
+        <Class IRI="/Chinese"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Compuesto"/>
+        <Class IRI="/Compuesto"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Derivada"/>
+        <Class IRI="/Derivada"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Dominio"/>
+        <Class IRI="/Dominio"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#English"/>
+        <Class IRI="/English"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Espanol"/>
+        <Class IRI="/Espanol"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FemGen"/>
+        <Class IRI="/FemGen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#French"/>
+        <Class IRI="/French"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#German"/>
+        <Class IRI="/German"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GramCat"/>
+        <Class IRI="/GramCat"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GramGen"/>
+        <Class IRI="/GramGen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GramNum"/>
+        <Class IRI="/GramNum"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Italian"/>
+        <Class IRI="/Italian"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Lengua"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/LinguisticExpression"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MascGen"/>
+        <Class IRI="/MascGen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/MorfTipo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PluralNum"/>
+        <Class IRI="/PluralNum"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Portuguese"/>
+        <Class IRI="/Portuguese"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Prefijo"/>
+        <Class IRI="/Prefijo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sigla"/>
+        <Class IRI="/Sigla"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Significado"/>
+        <Class IRI="/Significado"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Simbolo"/>
+        <Class IRI="/Simbolo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Simple"/>
+        <Class IRI="/Simple"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SingularNum"/>
+        <Class IRI="/SingularNum"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sintagma"/>
+        <Class IRI="/Sintagma"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sufijo"/>
+        <Class IRI="/Sufijo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sustantivo"/>
+        <Class IRI="/Sustantivo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Termino"/>
+        <Class IRI="/Termino"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Verbo"/>
+        <Class IRI="/Verbo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#WorldObject"/>
+        <Class IRI="/WorldObject"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSyntFunction"/>
@@ -192,19 +193,19 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <AnnotationProperty IRI="http://schema.org/funding"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://tecnolettra.uji.es/ontodic#Comentario_a_la_definición"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Comentario_a_la_definición"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://tecnolettra.uji.es/ontodic#Dict_Reference"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Dict_Reference"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://tecnolettra.uji.es/ontodic#Nota_de_uso"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:Nota_de_uso"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://tecnolettra.uji.es/ontodic#context"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:context"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://tecnolettra.uji.es/ontodic#definition"/>
+        <AnnotationProperty abbreviatedIRI="ontodic:definition"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:note"/>
@@ -213,124 +214,124 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#Abreviatura"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Abreviatura"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Adjetivo"/>
-        <Class IRI="#GramCat"/>
+        <Class IRI="/Adjetivo"/>
+        <Class IRI="/GramCat"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Adverbio"/>
-        <Class IRI="#GramCat"/>
+        <Class IRI="/Adverbio"/>
+        <Class IRI="/GramCat"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Catalan"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Catalan"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Chinese"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Chinese"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Compuesto"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Compuesto"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Derivada"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Derivada"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Dominio"/>
-        <Class IRI="#Significado"/>
+        <Class IRI="/Dominio"/>
+        <Class IRI="/Significado"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#English"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/English"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Espanol"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Espanol"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FemGen"/>
-        <Class IRI="#GramGen"/>
+        <Class IRI="/FemGen"/>
+        <Class IRI="/GramGen"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#French"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/French"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#German"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/German"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GramCat"/>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/GramCat"/>
+        <Class IRI="/LinguisticExpression"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GramGen"/>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/GramGen"/>
+        <Class IRI="/LinguisticExpression"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GramNum"/>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/GramNum"/>
+        <Class IRI="/LinguisticExpression"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Italian"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Italian"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Lengua"/>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/Lengua"/>
+        <Class IRI="/LinguisticExpression"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MascGen"/>
-        <Class IRI="#GramGen"/>
+        <Class IRI="/MascGen"/>
+        <Class IRI="/GramGen"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MorfTipo"/>
-        <Class IRI="#LinguisticExpression"/>
+        <Class IRI="/MorfTipo"/>
+        <Class IRI="/LinguisticExpression"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PluralNum"/>
-        <Class IRI="#GramNum"/>
+        <Class IRI="/PluralNum"/>
+        <Class IRI="/GramNum"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Portuguese"/>
-        <Class IRI="#Lengua"/>
+        <Class IRI="/Portuguese"/>
+        <Class IRI="/Lengua"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Prefijo"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Prefijo"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sigla"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Sigla"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Simple"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Simple"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SingularNum"/>
-        <Class IRI="#GramNum"/>
+        <Class IRI="/SingularNum"/>
+        <Class IRI="/GramNum"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sintagma"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Sintagma"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sufijo"/>
-        <Class IRI="#MorfTipo"/>
+        <Class IRI="/Sufijo"/>
+        <Class IRI="/MorfTipo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Sustantivo"/>
-        <Class IRI="#GramCat"/>
+        <Class IRI="/Sustantivo"/>
+        <Class IRI="/GramCat"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Verbo"/>
-        <Class IRI="#GramCat"/>
+        <Class IRI="/Verbo"/>
+        <Class IRI="/GramCat"/>
     </SubClassOf>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#isSynonymOf"/>
@@ -338,14 +339,6 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isSynonymOf"/>
     </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isSynonymOf"/>
-        <Class IRI="#LinguisticExpression"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isSynonymOf"/>
-        <Class IRI="#LinguisticExpression"/>
-    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:modified"/>
         <AbbreviatedIRI>dc:</AbbreviatedIRI>
@@ -781,19 +774,9 @@ levels of linguistic analysis, which may be morphological, grammatical or semant
         <AbbreviatedIRI>dc:type</AbbreviatedIRI>
         <Literal xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#LinguisticExpression</IRI>
-        <Literal xml:lang="es">ExpresionLinguistica</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#WorldObject</IRI>
-        <Literal xml:lang="es">ObjetoDelMundo</Literal>
-    </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
